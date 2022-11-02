@@ -145,7 +145,7 @@ const editBookByIdHandler = (request, h) => {
   if (!name) {
     const response = h.response({
       status: 'fail',
-      message: 'Gagal memperbarui buku. Mohon isi name buku',
+      message: 'Gagal memperbarui buku. Mohon isi nama buku',
     });
     response.code(400);
     return response;
@@ -200,7 +200,7 @@ const deleteBookByIdHandler = (request, h) => {
   if (index !== -1) {
     books.splice(index, 1);
     const response = h.response({
-      state: 'success',
+      status: 'success',
       message: 'Buku berhasil dihapus',
     });
     response.code(200);
